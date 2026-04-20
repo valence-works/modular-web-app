@@ -23,28 +23,28 @@ A minimalistic modular reference ASP.NET app that demonstrates shells and dynami
 1. Pack modules to `.nupkg` files into the host package folder:
 
    ```bash
-   dotnet pack /home/runner/work/modular-web-app/modular-web-app/src/ModularWebApp.Module.Greetings/ModularWebApp.Module.Greetings.csproj -c Debug
-   dotnet pack /home/runner/work/modular-web-app/modular-web-app/src/ModularWebApp.Module.Time/ModularWebApp.Module.Time.csproj -c Debug
+   dotnet pack src/ModularWebApp.Module.Greetings/ModularWebApp.Module.Greetings.csproj -c Debug
+   dotnet pack src/ModularWebApp.Module.Time/ModularWebApp.Module.Time.csproj -c Debug
    ```
 
 2. Run the host:
 
    ```bash
-   dotnet run --project /home/runner/work/modular-web-app/modular-web-app/src/ModularWebApp.Host/ModularWebApp.Host.csproj
+   dotnet run --project src/ModularWebApp.Host/ModularWebApp.Host.csproj
    ```
 
 3. Trigger runtime load + shell refresh:
 
    ```bash
-   curl -X POST http://localhost:5000/admin/reconcile
-   curl -X POST http://localhost:5000/admin/reload-shells
+   curl -X POST http://localhost:5226/admin/reconcile
+   curl -X POST http://localhost:5226/admin/reload-shells
    ```
 
 4. Verify shell-specific feature endpoints:
 
    ```bash
-   curl http://localhost:5000/features/greetings
-   curl http://localhost:5000/northwind/features/greetings
-   curl http://localhost:5000/northwind/features/time
-   curl http://localhost:5000/fabrikam/features/time
+   curl http://localhost:5226/features/greetings
+   curl http://localhost:5226/northwind/features/greetings
+   curl http://localhost:5226/northwind/features/time
+   curl http://localhost:5226/fabrikam/features/time
    ```
