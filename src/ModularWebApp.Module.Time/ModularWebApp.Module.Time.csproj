@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>ModularWebApp.Module.Time</PackageId>
+    <Version>1.0.0</Version>
+    <Description>Time module for CShells + Nuplane modular sample app.</Description>
+    <PackageOutputPath>../ModularWebApp.Host/packages</PackageOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="CShells.AspNetCore.Abstractions" Version="0.0.14" />
+  </ItemGroup>
+
+</Project>
