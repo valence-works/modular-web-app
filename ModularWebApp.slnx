@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/ModularWebApp.Host/ModularWebApp.Host.csproj" />
+    <Project Path="src/ModularWebApp.Module.Greetings/ModularWebApp.Module.Greetings.csproj" />
+    <Project Path="src/ModularWebApp.Module.Time/ModularWebApp.Module.Time.csproj" />
+  </Folder>
+</Solution>
